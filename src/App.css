@@ -3,7 +3,7 @@
   height: 660px;
   display: block;
   margin: 10px auto;
-  padding: 30px 5px;
+  padding: 10px 5px;
   border: 2px solid rgba(0, 0, 0, 0.406);
   border-radius: 5px;
   background-image: url("../src/certificates/11.jpg");
@@ -24,7 +24,14 @@
   font-family: "Great Vibes", cursive;
   font-weight: 400;
   font-style: normal;
+  /* position: absolute; */
+}
+#dateDiv{
   
+}
+#date{
+  align-self: flex-start;
+    
 }
 
 .generateBtn{

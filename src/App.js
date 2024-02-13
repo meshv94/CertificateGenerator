@@ -5,16 +5,26 @@ import { useState, useRef } from 'react';
 
 function App() {
   const [name, setName] = useState("")
+  const [date , setDate] = useState("")
 
   const mainDiv = useRef()
 
   const handleInput = (e) => {
     setName(e.target.value);
+    // let dt = new Date();
+
+    // let year = dt.getFullYear()
+    // let month = dt.getMonth()
+    // let day = dt.getDate()
+
+    // let today = `${day}/${month}/${year}`
+    setDate(new Date().toUTCString())
   }
 
   const generatePdf = (e) => {
     // console.log(mainDiv.current.innerText);
     e.preventDefault();
+    
 
     if (!mainDiv.current.innerText) {
       return
@@ -60,7 +70,9 @@ function App() {
 
       </div>
       <div className="main" ref={mainDiv}>
+        
         <h3 id='name'>{name}</h3>
+        {/* <p id='date'>{date}</p> */}
       </div>
 
     </>
