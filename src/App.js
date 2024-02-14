@@ -18,7 +18,7 @@ function App() {
     // let day = dt.getDate()
 
     // let today = `${day}/${month}/${year}`
-    setDate(new Date().toUTCString())
+    setDate(new Date().toDateString())
   }
 
   const generatePdf = (e) => {
@@ -70,9 +70,18 @@ function App() {
 
       </div>
       <div className="main" ref={mainDiv}>
+        <div className='main_child_date'>
+          <p id='date'>{date}</p>
+          </div>
+        <div className='main_child_text'>
+          <h3 id='name'>{name}</h3>
+          </div>
+        <div className='main_child_sign'>
+
+        </div>
         
-        <h3 id='name'>{name}</h3>
-        {/* <p id='date'>{date}</p> */}
+        
+        
       </div>
 
     </>
